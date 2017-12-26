@@ -22,11 +22,7 @@ app.use((req,resp,next)=>{
   });
   next();
 })
-app.use((req,resp,next)=>{
-  resp.render("maint.hbs",{
-    pageTitle:'Maintenance Page'
-  });
-})
+
 
 app.set('view engine','hbs');
 
