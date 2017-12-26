@@ -32,11 +32,19 @@ app.listen(port,()=> {
 });
 
 app.get("/",(req,resp) => {
-  resp.send("Hi");
+  resp.render("home.hbs",{
+    pageTitle :'Home Page'
+  });
 });
 
 app.get("/help",(req,resp) => {
   resp.send("help.html");
+});
+
+app.get("/project",(req,resp) => {
+  resp.render("project.hbs",{
+    pageTitle : 'Project Portfolio'
+  });
 });
 
 app.get('/about',(req,resp)=> {
